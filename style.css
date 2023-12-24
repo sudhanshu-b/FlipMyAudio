@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+body {
+    font-family: 'Afacad', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #eaeaea;
+}
+#splashScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#mainScreen{
+    display: flex;
+    flex-direction: column;
+}
+#flipScreen{
+    display: flex;
+    flex-direction: column;
+}
+.hd-logo{
+    height: 161px;
+    width: 186px;
+}
+.hd-log{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.heading {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.heading2 {
+    text-align: center;
+    font-size: 0.8em;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(86, 81, 81);
+}
+#mainScreen, #flipScreen{
+    display: none;
+    text-align: center; /* Center-align content */
+}
+
+#uploadBtn, #flipBtn, #saveBtn {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #3498db; /* Blue color for buttons */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#uploadBtn:hover, #flipBtn:hover, #saveBtn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+#saveBtn {
+    display: none;
+}
+.i-b{
+    font-family: 'Afacad', sans-serif;
+    background-color: #3498db;
+    border: 1px solid black;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 450px) {
+    .heading {
+        font-size: 1em;
+    }
+    .heading2 {
+        font-size: 0.6em;
+    }
+    .footer{
+        font-size: 0.5em;
+    }
+  }

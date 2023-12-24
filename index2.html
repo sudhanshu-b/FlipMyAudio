@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlipMyAudio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="Logo.ico">
+  </head>
+  <body>
+    <!-- Splash Screen -->
+    <div id="splashScreen">
+      <img src="Logo1.png" alt="Logo" width="100" height="100"/>
+    </div>
+
+    <!-- Main Screen -->
+    <div id="mainScreen">
+      <div class="hd-log">
+        <img class="hd-logo" src="Logo1.png" alt="">
+      </div>
+      
+      <div class="heading">
+        <h1 id="mainScreenHeading">Welcome!<br> Get your audio flipped within seconds.</h1>
+      </div>
+      
+      <div class="input-button">
+        <input class="i-b" type="file" id="fileInput" accept="audio/*" />
+      </div>
+      <div class="upload-button">
+        <button id="uploadBtn" onclick="uploadAudio()">Upload Audio</button>
+      </div>
+      <div class="footer">
+        <h3>Designed for TakeItIdeas Solutions by <span>&#169;</span>Sudhanshu</h3>
+      </div>
+      
+    </div>
+
+    <!-- Flip Screen -->
+    <div id="flipScreen">
+      <div class="hd-log">
+        <img class="hd-logo" src="Logo1.png" alt="">
+      </div>
+      <div class="heading2">
+        <h1 id="mainScreenHeading">Click on "FlipMyAudio" button</h1>
+      </div>
+      <button id="flipBtn" onclick="flipAudio()">FlipMyAudio</button>
+      <audio controls id="flippedAudio"></audio>
+      <button id="saveBtn" onclick="saveAudio()">Save Audio</button>
+      
+      <div class="footer">
+        <h3>Designed for TakeItIdeas Solutions by <span>&#169;</span>Sudhanshu</h3>
+      </div>
+    </div>
+    
+    <script src="app.js"></script>
+  </body>
+</html>
