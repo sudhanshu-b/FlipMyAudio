@@ -2,15 +2,14 @@ let audioFile = null;
       let audioContext = null;
       let flippedAudioBuffer = null;
 
-      // Function to handle audio upload
+      // Handle audio upload
       function uploadAudio() {
         const fileInput = document.getElementById("fileInput");
         if (fileInput.files.length > 0) {
           audioFile = fileInput.files[0];
 
-          // Your upload logic here (you may want to upload the file to a server)
 
-          // Assuming successful upload, show the flip screen
+
           document.getElementById("mainScreen").style.display = "none";
           document.getElementById("flipScreen").style.display = "flex";
         } else {
@@ -18,7 +17,7 @@ let audioFile = null;
         }
       }
 
-      // Function to handle audio flip
+      //Handle audio flip
       function flipAudio() {
         if (audioFile) {
           audioContext = new (window.AudioContext ||
@@ -29,7 +28,7 @@ let audioFile = null;
             audioContext.decodeAudioData(
               event.target.result,
               function (buffer) {
-                // Reverse the audio buffer
+            
                 flippedAudioBuffer = reverseBuffer(buffer);
 
                 // Display flipped audio and show the save button
@@ -39,7 +38,7 @@ let audioFile = null;
                 audioElement.src = URL.createObjectURL(
                   bufferToBlob(flippedAudioBuffer)
                 );
-                audioElement.play(); // Start playing the reversed audio
+                audioElement.play();
                 document.getElementById("saveBtn").style.display = "block";
               }
             );
@@ -51,7 +50,7 @@ let audioFile = null;
         }
       }
 
-      // Function to reverse an audio buffer
+      //Reverse an audio buffer
       function reverseBuffer(buffer) {
         const reversedBuffer = audioContext.createBuffer(
           buffer.numberOfChannels,
@@ -73,19 +72,17 @@ let audioFile = null;
         return reversedBuffer;
       }
 
-      // Function to handle audio save
+      //Handle audio save
       function saveAudio() {
         if (flippedAudioBuffer) {
-          // Your save logic here (you may want to save the file or send it to a server)
-
-          // Trigger the download of the flipped audio
+         
           downloadAudio(flippedAudioBuffer);
         } else {
           alert("No audio file to save.");
         }
       }
 
-      // Function to trigger download of an audio file
+
       function downloadAudio(buffer) {
         const a = document.createElement("a");
         const blob = bufferToBlob(buffer);
@@ -177,7 +174,7 @@ let audioFile = null;
         }
       }
 
-      // Simulate a splash screen delay
+      // Splash Screen
       setTimeout(function () {
         document.getElementById("splashScreen").style.display = "none";
         document.getElementById("mainScreen").style.display = "flex";
